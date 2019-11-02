@@ -1,0 +1,13 @@
+CC = gcc
+
+build: tema1
+ 
+tema1: tema1.o libcompare.so
+	gcc -o tema1 tema1.o -lcompare -L.
+
+tema1.o: tema1.cpp
+	gcc -c -o tema1.o GNUtema1.cpp
+
+clean:
+	rm tema1.o
+
